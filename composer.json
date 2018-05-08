@@ -1,0 +1,24 @@
+{
+    "name": "redaced/datomn",
+    "description": "date to time ago Mongolian",
+    "keywords": ["date", "Mongolian", "timeago", "ago", "time"],
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Батмөнх",
+            "email": "peternity9@gmail.com"
+        }
+    ],
+    "type": "project",
+    "require": {
+		"php": ">=5.4"
+    },
+	"require-dev": {
+		"phpunit/phpunit": "5.2.*"
+    },
+	"autoload": {
+        "psr-4": {
+            "Redaced\\Datomn\\": "src/"
+        }
+    }
+}
