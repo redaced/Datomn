@@ -2,8 +2,8 @@
 
 namespace Redaced\Datomn;
 
-class YourClass{
-    public function asd($param1){
+class Datomn{
+    public function method1($param1){
       return $param1;
     }
    public function converter($param1){
