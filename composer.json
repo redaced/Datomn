@@ -9,7 +9,7 @@
             "email": "peternity9@gmail.com"
         }
     ],
-    "type": "project",
+    "type": "library",
     "require": {
 		"php": ">=5.4"
     },
