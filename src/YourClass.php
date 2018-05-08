@@ -1,29 +1,44 @@
-<?php namespace Redaced\Datomn;
+<?php 
 
-/**
-*  A sample class
-*
-*  Use this section to define what this class is doing, the PHPDocumentator will use this
-*  to automatically generate an API documentation using this information.
-*
-*  @author yourname
-*/
+namespace Redaced\Datomn;
+
 class YourClass{
-
-   /**  @var string $m_SampleProperty define here what this variable is for, do this for every instance variable */
-   private $m_SampleProperty = '';
- 
-  /**
-  * Sample method 
-  *
-  * Always create a corresponding docblock for each method, describing what it is for,
-  * this helps the phpdocumentator to properly generator the documentation
-  *
-  * @param string $param1 A string containing the parameter, do this for each parameter to the function, make sure to make it descriptive
-  *
-  * @return string
-  */
-   public function method1($param1){
-			return "Hello World";
+    public function asd($param1){
+      return $param1;
+    }
+   public function converter($param1){
+			$date = date_create();      
+        date_timestamp_set($date, strtotime($ptime));
+        $a = date_format($date, 'Y-m-d H:i:s'); 
+        date_default_timezone_set("Asia/Ulaanbaatar");
+        $b = date("Y-m-d H:i:s");
+        $etime = strtotime($b) - strtotime($a);
+        if ($etime < 1)
+        {
+            return '0 seconds';
+        }
+        $a = array( 365 * 24 * 60 * 60  =>  'жил',
+                     30 * 24 * 60 * 60  =>  'сар',
+                          24 * 60 * 60  =>  'өдөр',
+                               60 * 60  =>  'цаг',
+                                    60  =>  'минут',
+                                     1  =>  'секунт'
+                    );
+        $a_plural = array( 'жил'   => 'жилийн',
+                           'сар'  => 'сарын',
+                           'өдөр'    => 'өдрийн',
+                           'цаг'   => 'цагийн',
+                           'минут' => 'минутын',
+                           'секунт' => 'секунтын'
+                    );
+        foreach ($a as $secs => $str)
+        {
+            $d = $etime / $secs;
+            if ($d >= 1)
+            {
+                $r = round($d);
+                return $r . ' ' . ($r > 1 ? $a_plural[$str] : $str) . ' өмнө';
+            }
+        }
    }
 }
