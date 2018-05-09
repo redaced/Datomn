@@ -6,7 +6,7 @@ class Converter{
     public function method1($param1){
       return $param1;
     }
-   public function getString($ptime){
+   public static function getString($ptime){
 		    $date = date_create();      
         date_timestamp_set($date, strtotime($ptime));
         $a = date_format($date, 'Y-m-d H:i:s'); 
