@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Redaced\\Datomn\\": "src/Redaced/Datomn"
+            "Redaced\\": "src/Redaced/Datomn"
         }
     }
 }
